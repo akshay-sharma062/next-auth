@@ -27,7 +27,7 @@ try {
         username:user.username,
         email:user.email
     }
-    const token = await jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:'1D'})
+    const token = await jwt.sign(tokenData,'akshaysharma',{expiresIn:'1D'})
 
     const response = NextResponse.json({
         message:"Logged in success",
