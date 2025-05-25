@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 export async function connect() {
   try {
-    mongoose.connect(process.env.MONGO_URL!);
+    mongoose.connect('mongodb://localhost:27017/nextauth');
     const connection = mongoose.connection;
     connection.on('connected',()=>{
         console.log('mongoDb Connected')
